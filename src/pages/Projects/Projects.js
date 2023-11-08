@@ -2,12 +2,13 @@ import HeaderComponent from "../../components/header/Header";
 import React, { useState } from "react";
 
 import "./Projects.scss";
+import ForcaGame from "./ForcaGame"; // Importe o componente do jogo da forca
 
 function Projects() {
   const questions = [
     {
       question: "Qual a cor favorita do Otávio?",
-      options: [ "Verde", "Vermelho", "Azul", "Amarelo"],
+      options: ["Verde", "Vermelho", "Azul", "Amarelo"],
       answer: "Azul",
     },
     {
@@ -20,7 +21,7 @@ function Projects() {
       ],
       answer: "Do Harry Potter",
     },
-    { 
+    {
       question: "Qual o time do Otávio?",
       options: ["Grêmio", "Inter", "Santos", "Corinthians"],
       answer: "Grêmio",
@@ -45,6 +46,7 @@ function Projects() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [quizCompleted, setQuizCompleted] = useState(false);
+  const [showForcaGame, setShowForcaGame] = useState(false);
 
   const handleAnswer = (selectedOption) => {
     if (selectedOption === questions[currentQuestion].answer) {
@@ -64,22 +66,24 @@ function Projects() {
       <div className="content">
         {quizCompleted ? (
           <div>
-            <h1>Quiz1 completo!</h1>
+            <h1>Quiz completo!</h1>
             <p className="questions">
               Parabéns você acertou: {score} de {questions.length}
             </p>
+            <button onClick={() => setShowForcaGame(true)}>Continuar</button>
           </div>
         ) : (
           <div>
             <h1>Conhece mesmo o Otávio?</h1>
             <p className="questions">{questions[currentQuestion].question}</p>
-              {questions[currentQuestion].options.map((option, index) => (
-                <button className="button" onClick={() => handleAnswer(option)}>
-                  {option}
-                </button>
-              ))}
+            {questions[currentQuestion].options.map((option, index) => (
+              <button className="button" onClick={() => handleAnswer(option)}>
+                {option}
+              </button>
+            ))}
           </div>
         )}
+        {showForcaGame && <ForcaGame />}
       </div>
     </div>
   );
