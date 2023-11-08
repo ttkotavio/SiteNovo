@@ -1,6 +1,5 @@
 import HeaderComponent from "../../components/header/Header";
 import React, { useState } from "react";
-
 import "./Projects.scss";
 import ForcaGame from "./ForcaGame"; // Importe o componente do jogo da forca
 
@@ -60,17 +59,24 @@ function Projects() {
     }
   };
 
+  const handleContinue = () => {
+    setShowForcaGame(true);
+    setQuizCompleted(false); // Oculta o "Quiz completo"
+  };
+
   return (
     <div className="app">
       <HeaderComponent />
       <div className="content">
-        {quizCompleted ? (
+        {showForcaGame ? (
+          <ForcaGame />
+        ) : quizCompleted ? (
           <div>
             <h1>Quiz completo!</h1>
             <p className="questions">
               Parabéns você acertou: {score} de {questions.length}
             </p>
-            <button onClick={() => setShowForcaGame(true)}>Continuar</button>
+            <button onClick={handleContinue}>Continuar</button>
           </div>
         ) : (
           <div>
@@ -83,7 +89,6 @@ function Projects() {
             ))}
           </div>
         )}
-        {showForcaGame && <ForcaGame />}
       </div>
     </div>
   );

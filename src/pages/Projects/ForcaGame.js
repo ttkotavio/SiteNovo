@@ -3,9 +3,10 @@ import "./ForcaGames.scss";
 
 function ForcaGame() {
   const secretPhrase = "quer namorar comigo?";
-  const [displayPhrase, setDisplayPhrase] = useState(
-    Array(secretPhrase.length).fill("_")
-  );
+  const words = secretPhrase.split(" "); // Divide a frase em palavras
+  const initialDisplayPhrase = words.map(word => word.replace(/./g, "_")); // Inicializa a frase oculta
+
+  const [displayPhrase, setDisplayPhrase] = useState(initialDisplayPhrase);
 
   const [usedLetters, setUsedLetters] = useState([]);
   const maxAttempts = 10;
@@ -20,17 +21,26 @@ function ForcaGame() {
     const newUsedLetters = [...usedLetters, guess];
     setUsedLetters(newUsedLetters);
 
+    let phraseUpdated = displayPhrase.slice(); // Copia a frase atual
+
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      const wordArray = Array.from(word);
+
+      for (let j = 0; j < wordArray.length; j++) {
+        if (wordArray[j] === guess) {
+          phraseUpdated[i] = phraseUpdated[i].split('');
+          phraseUpdated[i][j] = guess;
+          phraseUpdated[i] = phraseUpdated[i].join('');
+        }
+      }
+    }
+
+    setDisplayPhrase(phraseUpdated);
+
     if (!secretPhrase.includes(guess)) {
       setAttemptsLeft(attemptsLeft - 1);
     }
-
-    const newDisplayPhrase = [...displayPhrase];
-    for (let i = 0; i < secretPhrase.length; i++) {
-      if (secretPhrase[i] === guess) {
-        newDisplayPhrase[i] = guess;
-      }
-    }
-    setDisplayPhrase(newDisplayPhrase);
   };
 
   const renderAlphabetButtons = () => {
@@ -46,7 +56,9 @@ function ForcaGame() {
     <div className="forca-game">
       <h1>Jogo da Forca</h1>
       <p className="phrase-label">Frase a ser adivinhada:</p>
-      <p className="phrase">{displayPhrase.join(" ")}</p>
+      {displayPhrase.map((word, index) => (
+        <p key={index} className="phrase">{word}</p>
+      ))}
       <p className="attempts-left">Tentativas restantes: {attemptsLeft}</p>
       <div className="alphabet-buttons">{renderAlphabetButtons()}</div>
     </div>
