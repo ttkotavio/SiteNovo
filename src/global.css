@@ -1,0 +1,60 @@
+:root {
+  /* Cores principais */
+  --color-primary: #040615;
+  --color-secondary: #8d5ef7;
+  --color-tertiary: #c4c4c4;
+  --color-quaternary: #6272a4;
+
+  /* Cores adicionais */
+  --color-quinary: #ffb86c;
+  --color-senary: #50fa7b;
+  --color-septenary: #e64e60;
+  --color-octonary: #f8f8f2;
+  --color-nonary: #44475a;
+  --color-denary: #282a36;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+h1 {
+  letter-spacing: 3px;
+  line-height: 1.8;
+  font-size: 56px;
+  font-weight: bolder;
+  color: var(--color-secondary);
+}
+
+p {
+  color: var(--color-tertiary);
+  letter-spacing: 3px;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
+h4 {
+  letter-spacing: 3px;
+  line-height: 1.8;
+  color: var(--color-tertiary);
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1.5;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

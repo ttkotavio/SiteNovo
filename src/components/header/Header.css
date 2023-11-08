@@ -1,0 +1,57 @@
+.page-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(144, 0, 255, 0.35); /* Define a cor de fundo com opacidade */
+  backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: space-around;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 18px;
+}
+
+nav li {
+  padding: 10px;
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.25s;
+  font-size: 16px;
+  border-bottom: 2px solid transparent !important;
+}
+
+.links {
+  text-decoration: none;
+}
+
+nav li:hover {
+  transition: 0.25s;
+  color: var(--color-septenary) !important;
+  border-bottom: 2px solid var(--color-septenary) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .page-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+  nav ul {
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav li {
+    padding: 15px;
+  }
+}
