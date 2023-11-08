@@ -34,7 +34,7 @@ function ForcaGame() {
   };
 
   const renderAlphabetButtons = () => {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    const alphabet = "abcdefghijklmnopqrstuvwxyz?-!#$%*";
     return alphabet.split("").map((letter) => (
       <button key={letter} onClick={() => handleGuess(letter)}>
         {letter.toUpperCase()}
