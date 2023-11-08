@@ -1,0 +1,40 @@
+.perguntas{
+    color:aquamarine;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px; /* Margem direita entre os botões */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    width: 100%;
+    margin: 1vh;
+  
+    &:hover {
+      background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+    }
+  }
+
+  .questions{
+    text-align: center;
+}
+
+.options{
+    gap: 50rem;
+}
+
+  .content{
+     display: flex;
+     align-items: center;
+     margin: auto;
+     align-self: center;
+     text-align: center;
+  }
+  
