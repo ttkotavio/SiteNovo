@@ -119,9 +119,9 @@ function ForcaGame() {
             pensava era que eu queria muito te ver de novo.
           </p>
           <p>
-            Passei dias pensando em como eu ia te pedir em namoro... e... eu
+            E agora eu passei esses últimos dias pensando em como eu ia te pedir em namoro... e... eu
             confesso que no McDonalds não era como eu tava planejando... só que
-            de uns dias pra cá eu sentia que eu não podia mais perder meu tempo,
+            de uns dias pra cá eu sentia que eu não podia mais perder tempo,
             não queria mais passar 1 dia se quer sem te assumir, faz dias que tu
             não sai da minha cabeça, tu é a primeira coisa que eu penso quando
             acordo e fico contigo até o momento de dormir...
@@ -141,12 +141,11 @@ function ForcaGame() {
             fazer juntos, quero inclusive adicionar mais um item na lista
             "planejar mais 1000 coisas", pra gente sempre ter alguma coisa pra
             fazer, mas o que importa mesmo é estar ao teu lado. como eu já disse
-            antes, eu vou querer fazer QUALQUER coisa, desde que tu esteja lá do
-            meu lado, pois esses são os melhores momentos...
+            antes, eu vou querer fazer QUALQUER coisa, desde que tu esteja lá, pois esses são os melhores momentos...
           </p>
           <p>
             Daqui pra frente, eu prometo sempre fazer de tudo pra te fazer a
-            mulher mais feliz desse universo, te dando carinho, amor, apoio em
+            mulher mais feliz desse universo, te dando MUTIO carinho, amor, apoio em
             tudo o que tu quiser, muitos beijos de todos os tipos (beijos
             malucos, beijos normais, beijos lentos, beijos rapidos, beijinhos,
             beijo de bom dia, beijo de boa noite, beijo de bom trabalho, beijo
@@ -159,6 +158,7 @@ function ForcaGame() {
             E também agora que somos oficialmente namorados eu adoraria começar
             meu "treinamento" contigo.
           </p>
+          <p>te amo ❤️</p>
         </div>
       )}
 
