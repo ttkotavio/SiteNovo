@@ -66,7 +66,7 @@ function Projects() {
 
   return (
     <div className="app">
-      <HeaderComponent />
+     <HeaderComponent style={1} />
       <div className="content">
         {showForcaGame ? (
           <ForcaGame />

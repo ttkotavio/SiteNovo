@@ -1,17 +1,20 @@
-import React, { useState, useLayoutEffect } from 'react';
-import Confetti from 'react-confetti';
-import './ForcaGames.scss';
+import React, { useState, useLayoutEffect } from "react";
+import Confetti from "react-confetti";
+import "./ForcaGames.scss";
 
 function ForcaGame() {
-  const secretPhrase = 'quer namorar comigo?';
-  const words = secretPhrase.split(' '); // Divide a frase em palavras
-  const initialDisplayPhrase = words.map((word) => word.replace(/./g, '_')); // Inicializa a frase oculta
+  const [cont, setCont] = useState(0); // Declare cont como um estado
+  const secretPhrase = "quer namorar comigo?";
+  const words = secretPhrase.split(" "); // Divide a frase em palavras
+  const initialDisplayPhrase = words.map((word) => word.replace(/./g, "_")); // Inicializa a frase oculta
 
   const [displayPhrase, setDisplayPhrase] = useState(initialDisplayPhrase);
 
   const [usedLetters, setUsedLetters] = useState([]);
-  const [attemptsLeft, setAttemptsLeft] = useState(5); // Número inicial de tentativas
+  const maxAttempts = 10;
+  const [attemptsLeft, setAttemptsLeft] = useState(maxAttempts);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [moveAmount, setMoveAmount] = useState(0);
 
   const handleGuess = (guess) => {
     if (usedLetters.includes(guess)) {
@@ -30,30 +33,30 @@ function ForcaGame() {
 
       for (let j = 0; j < wordArray.length; j++) {
         if (wordArray[j] === guess) {
-          phraseUpdated[i] = phraseUpdated[i].split('');
+          phraseUpdated[i] = phraseUpdated[i].split("");
           phraseUpdated[i][j] = guess;
-          phraseUpdated[i] = phraseUpdated[i].join('');
+          phraseUpdated[i] = phraseUpdated[i].join("");
         }
       }
     }
 
     setDisplayPhrase(phraseUpdated);
 
-    if (!secretPhrase.includes(guess)) { 
+    if (!secretPhrase.includes(guess)) {
       setAttemptsLeft(attemptsLeft - 1);
+    } else {
+      setCont(cont + 1); // Incrementa cont usando setCont
+      console.log(cont);
     }
 
-    // Verifica se todas as letras foram adivinhadas
-    const isPhraseComplete = displayPhrase.every((word) => !word.includes('_'));
-    if (isPhraseComplete) {
-      setAttemptsLeft(0); // Define o número de tentativas para 0
-      setShowConfetti(true); // Mostra o confete
+    if (cont === 11) {
+      setAttemptsLeft(0);
     }
   };
 
   const renderAlphabetButtons = () => {
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz?-!#$%*';
-    return alphabet.split('').map((letter) => (
+    const alphabet = "abcdefghijklmnopqrstuvwxyz?-!#$%*";
+    return alphabet.split("").map((letter) => (
       <button key={letter} onClick={() => handleGuess(letter)}>
         {letter.toUpperCase()}
       </button>
@@ -61,13 +64,11 @@ function ForcaGame() {
   };
 
   const handleNo = () => {
-    // Implemente o código para mover o botão "NÃO" para baixo
-    // Isso pode ser feito usando CSS ou animações JavaScript.
-    // Por exemplo, você pode adicionar uma classe CSS ao botão "NÃO"
-    // que faz ele se mover para baixo.
+    setMoveAmount(moveAmount + 10);
   };
 
   const handleYes = () => {
+    setShowConfetti(true);
     // Outras ações que você deseja realizar ao clicar em "SIM"
   };
 
@@ -76,10 +77,10 @@ function ForcaGame() {
       // Atualiza o tamanho da janela aqui, se necessário
     }
 
-    window.addEventListener('resize', updateSize);
+    window.addEventListener("resize", updateSize);
     updateSize();
 
-    return () => window.removeEventListener('resize', updateSize);
+    return () => window.removeEventListener("resize", updateSize);
   }, []);
 
   return (
@@ -96,16 +97,21 @@ function ForcaGame() {
 
       {attemptsLeft === 0 && (
         <div className="end-game-buttons">
-          <button onClick={handleNo}>NÃO</button>
-          <button onClick={handleYes}>SIM</button>
+          <button
+        className="noButton"
+        style={{ transform: `translateY(${moveAmount*3}px)`}}
+        onClick={handleNo}
+      >
+        NÃO
+      </button>
+          <button className="yesButton" onClick={handleYes}>
+            SIM
+          </button>
         </div>
       )}
 
       {showConfetti && (
-        <Confetti
-          width={window.innerWidth}
-          height={window.innerHeight}
-        />
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
       )}
     </div>
   );

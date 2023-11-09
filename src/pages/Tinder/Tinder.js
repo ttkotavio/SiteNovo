@@ -35,42 +35,42 @@ function AboutMe() {
   const [cards, setCards] = useState([
     {
       id: 1,
-      name: "Pessoa 1",
+      name: "Otávio Cunha",
       photos: [foto1, foto2, foto3],
     },
     {
       id: 2,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto4, foto5, foto6],
     },
     {
       id: 3,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto7, foto8, foto9, foto10, foto11],
     },
     {
       id: 4,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto12, foto13],
     },
     {
       id: 5,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto14, foto15, foto16, foto17],
     },
     {
       id: 6,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto18],
     },
     {
       id: 7,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto19, foto20],
     },
     {
       id: 8,
-      name: "Pessoa 2",
+      name: "Otávio Cunha",
       photos: [foto21, foto22, foto23, foto24, foto25],
     },
   ]);
@@ -101,7 +101,7 @@ function AboutMe() {
 
   return (
     <div className="appe">
-      <HeaderComponent />
+      <HeaderComponent style={2} />
       <h1>Tinder</h1>
       {currentCardIndex < cards.length ? (
         <div className="card">

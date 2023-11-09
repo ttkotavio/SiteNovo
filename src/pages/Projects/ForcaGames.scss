@@ -10,6 +10,31 @@
       text-align: center;
       font-size: 18px;
     }
+
+    .noButton{
+        background-color: rgb(255, 80, 80);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 6rem;
+    }
+ 
+
+    .yesButton{
+        background-color: rgb(51, 172, 29);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        width: 6rem;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
   
     .phrase {
       font-size: 36px;

@@ -5,7 +5,7 @@ import "./Home.scss";
 function Home() {
   return (
     <div className="app">
-      <HeaderComponent />
+      <HeaderComponent style={1} />
       <div className="content">
         <div className="title">
           <h1>Site feito para Giulia</h1>
