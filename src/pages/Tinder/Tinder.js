@@ -130,7 +130,7 @@ function AboutMe() {
           </div>
         </div>
       ) : (
-        <p className="subtitle">Não há mais perfis para exibir.</p>
+        <p className="subtitle">Não há mais perfis para exibir. queria mais alguém além de mim????</p>
       )}
     </div>
   );
