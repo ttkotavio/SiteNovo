@@ -11,9 +11,9 @@ const HeaderComponent = ({ style }) => {
       <nav>
         <ul>
           <Link className="links" to="/"><li>Home</li></Link>
-          <Link className="links" to="/misterio"><li>Surpresa?</li></Link>
-          <Link className="links" to="/tinder"><li>Tinder</li></Link>
           <Link className="links" to="/lista"><li>Lista</li></Link>
+          <Link className="links" to="/tinder"><li>Tinder</li></Link>
+          <Link className="links" to="/misterio"><li>Surpresa?</li></Link>
         </ul>
       </nav>
     </header>

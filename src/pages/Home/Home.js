@@ -111,13 +111,13 @@ function Home() {
           <hr></hr>
           <p className="titles">Sorvetinho</p>
           <p>
-            No nosso quarto encontro, decidimos tomamos sorvete juntos, aquele
-            que infelizmente não foi possivel tomar no final do terceiro.
+            No nosso quarto encontro, decidimos tomar sorvete juntos, aquele que
+            infelizmente não foi possivel tomar no final do terceiro.
           </p>
           <p>
             Foi nesse momento especial que decidi mostrar como realmente me
             sentia. Entreguei a primeira cartinha contando o que eu sentia de
-            forma sincera e do meu jeitinho. Foi a primeira ver que eu te vi
+            forma sincera e do meu jeitinho. Foi a primeira vez que eu te vi
             "chorar" também 🙃
           </p>
 
@@ -134,6 +134,17 @@ function Home() {
             eu quero revanche!
           </p>
 
+          <hr></hr>
+
+          <p className="titles">Almoço</p>
+          <p>
+            Foi nosso primeiro almoço juntos... fiquei 10 minutos parado na
+            frente do subway igual um imbecil kkkkkkkkk mas faz parte.
+            Infelizmente ficamos pouto tempo juntos, mas eu amei! E mesmo que
+            fosse pra te ver só por 5 minutos eu também teria ido. Eu daria tudo
+            pra te ver nem que fosse 1 segundo por dia, nem que fosse só pra te
+            dar um beijinho.
+          </p>
           <hr></hr>
         </div>
       </div>
