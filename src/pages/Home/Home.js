@@ -109,6 +109,32 @@ function Home() {
           </p>
 
           <hr></hr>
+          <p className="titles">Sorvetinho</p>
+          <p>
+            No nosso quarto encontro, decidimos tomamos sorvete juntos, aquele
+            que infelizmente não foi possivel tomar no final do terceiro.
+          </p>
+          <p>
+            Foi nesse momento especial que decidi mostrar como realmente me
+            sentia. Entreguei a primeira cartinha contando o que eu sentia de
+            forma sincera e do meu jeitinho. Foi a primeira ver que eu te vi
+            "chorar" também 🙃
+          </p>
+
+          <hr></hr>
+
+          <p className="titles">Domingo</p>
+          <p>
+            No nosso quinto encontro... e sem dúvidas um dos melhores. acho que
+            tivemos um dos nossos melhores momentos juntos, assistimos filmes e
+            eu te ensinei a jogar truco.
+          </p>
+          <p>
+            Infelizmente eu perdi no truco... mas posso dizer que valeu a pena e
+            eu quero revanche!
+          </p>
+
+          <hr></hr>
         </div>
       </div>
     </div>
